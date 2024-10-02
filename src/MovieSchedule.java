@@ -8,4 +8,7 @@ class StandardSchedule implements MovieSchedule {
         this.movie = movie;
         this.time = time;
     }
+    public void setTime(String time) {
+        this.time = time;
+    }
 }
