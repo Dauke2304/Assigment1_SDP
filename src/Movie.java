@@ -26,3 +26,14 @@ class IMAXMovie implements Movie {
 abstract class MovieFactory {
     public abstract Movie createMovie(String title);
 }
+class RegularMovieFactory extends MovieFactory {
+    public Movie createMovie(String title) {
+        return new RegularMovie(title);
+    }
+}
+
+class IMAXMovieFactory extends MovieFactory {
+    public Movie createMovie(String title) {
+        return new IMAXMovie(title);
+    }
+}
