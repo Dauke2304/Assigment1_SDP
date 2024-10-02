@@ -12,3 +12,6 @@ class LightThemeButton implements Button {
         System.out.println("Rendering Light Theme Button");
     }
 }
+interface UIFactory {
+    Button createButton();
+}
