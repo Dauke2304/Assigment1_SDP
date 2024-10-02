@@ -1,3 +1,4 @@
+// Singleton for CinemaConfig
 public class CinemaConfig {
     private static CinemaConfig instance;
     private String cinemaName;
@@ -12,12 +13,12 @@ public class CinemaConfig {
         return instance;
     }
 
-    public void setCinemaName(String name) {
-        this.cinemaName = name;
+    public void setCinemaName(String cinemaName) {
+        this.cinemaName = cinemaName;
     }
 
     public String getCinemaName() {
-        return this.cinemaName;
+        return cinemaName;
     }
 
     public void setNumberOfScreens(int numberOfScreens) {
@@ -25,7 +26,6 @@ public class CinemaConfig {
     }
 
     public int getNumberOfScreens() {
-        return this.numberOfScreens;
+        return numberOfScreens;
     }
-
 }
