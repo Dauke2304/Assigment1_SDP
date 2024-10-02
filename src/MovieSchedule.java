@@ -11,4 +11,13 @@ class StandardSchedule implements MovieSchedule {
     public void setTime(String time) {
         this.time = time;
     }
+    @Override
+    public MovieSchedule clone() {
+        try {
+            return (MovieSchedule) super.clone();
+        } catch (CloneNotSupportedException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
 }
