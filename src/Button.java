@@ -15,3 +15,14 @@ class LightThemeButton implements Button {
 interface UIFactory {
     Button createButton();
 }
+class DarkThemeFactory implements UIFactory {
+    public Button createButton() {
+        return new DarkThemeButton();
+    }
+}
+
+class LightThemeFactory implements UIFactory {
+    public Button createButton() {
+        return new LightThemeButton();
+    }
+}
