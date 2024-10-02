@@ -1,10 +1,10 @@
-// Movie Interface
+
 interface Movie {
     String getTitle();
     String getType();
 }
 
-// RegularMovie Class
+
 class RegularMovie implements Movie {
     private String title;
 
@@ -23,12 +23,12 @@ class RegularMovie implements Movie {
     }
 }
 
-// Abstract Factory for Movie Creation
+
 abstract class MovieFactory {
     public abstract Movie createMovie(String title);
 }
 
-// Concrete Factory for Regular Movies
+
 class RegularMovieFactory extends MovieFactory {
     @Override
     public Movie createMovie(String title) {
