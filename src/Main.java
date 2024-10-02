@@ -4,25 +4,32 @@ public class Main {
         CinemaConfig config = CinemaConfig.getInstance();
         config.setCinemaName("Starlight Cinemas");
         System.out.println("Cinema Name: " + config.getCinemaName());
+
         // Factory Method usage
         MovieFactory regularFactory = new RegularMovieFactory();
         Movie movie = regularFactory.createMovie("Inception");
         System.out.println("Movie: " + movie.getTitle() + ", Type: " + movie.getType());
+
         // Abstract Factory usage
         UIFactory uiFactory = new DarkThemeFactory();
         Button button = uiFactory.createButton();
         button.render();
+
         // Builder usage
-        TicketBooking booking = new TicketBookingBuilder()
+        TicketBooking booking = new TicketBooking.TicketBookingBuilder()
                 .setMovieTitle("Inception")
                 .setSeatNumber("A1")
                 .setSnackCombo("Popcorn and Soda")
                 .build();
+        System.out.println("Ticket Booking: " + booking.getMovieTitle() + ", Seat: " + booking.getSeatNumber() + ", Snacks: " + booking.getSnackCombo());
+
         // Prototype usage
         StandardSchedule template = new StandardSchedule();
         template.setTime("18:00");
         MovieSchedule eveningSchedule = template.clone();
         eveningSchedule.setMovie(movie);
+        System.out.println("Movie: " + eveningSchedule.getMovie().getTitle() + ", Time: " + eveningSchedule.getTime());
+
         System.out.println("Cinema Management System initialized.");
     }
 }
