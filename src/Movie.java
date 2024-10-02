@@ -12,3 +12,14 @@ class RegularMovie implements Movie {
         return this.title;
     }
 }
+class IMAXMovie implements Movie {
+    private String title;
+
+    public IMAXMovie(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return this.title;
+    }
+}
