@@ -1,4 +1,3 @@
-// TicketBooking Class
 class TicketBooking {
     private String movieTitle;
     private String seatNumber;
