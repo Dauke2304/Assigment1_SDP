@@ -23,3 +23,6 @@ class IMAXMovie implements Movie {
         return this.title;
     }
 }
+abstract class MovieFactory {
+    public abstract Movie createMovie(String title);
+}
