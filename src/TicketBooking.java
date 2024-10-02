@@ -21,5 +21,9 @@ public class TicketBooking {
             return this;
         }
 
+        public TicketBooking build() {
+            return new TicketBooking(this);
+        }
+
     }
 }
