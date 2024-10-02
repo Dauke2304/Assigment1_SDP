@@ -1,6 +1,10 @@
+// Movie Interface
 interface Movie {
     String getTitle();
+    String getType();
 }
+
+// RegularMovie Class
 class RegularMovie implements Movie {
     private String title;
 
@@ -8,32 +12,26 @@ class RegularMovie implements Movie {
         this.title = title;
     }
 
+    @Override
     public String getTitle() {
-        return this.title;
-    }
-}
-class IMAXMovie implements Movie {
-    private String title;
-
-    public IMAXMovie(String title) {
-        this.title = title;
+        return title;
     }
 
-    public String getTitle() {
-        return this.title;
+    @Override
+    public String getType() {
+        return "Regular";
     }
 }
+
+// Abstract Factory for Movie Creation
 abstract class MovieFactory {
     public abstract Movie createMovie(String title);
 }
+
+// Concrete Factory for Regular Movies
 class RegularMovieFactory extends MovieFactory {
+    @Override
     public Movie createMovie(String title) {
         return new RegularMovie(title);
-    }
-}
-
-class IMAXMovieFactory extends MovieFactory {
-    public Movie createMovie(String title) {
-        return new IMAXMovie(title);
     }
 }
