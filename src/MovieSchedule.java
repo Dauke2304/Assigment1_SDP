@@ -1,2 +1,3 @@
-public class MovieSchedule {
+interface MovieSchedule extends Cloneable {
+    MovieSchedule clone();
 }
