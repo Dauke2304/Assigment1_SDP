@@ -5,6 +5,13 @@ public class CinemaConfig {
 
     private CinemaConfig() {}
 
+    public static synchronized CinemaConfig getInstance() {
+        if (instance == null) {
+            instance = new CinemaConfig();
+        }
+        return instance;
+    }
+
     public void setCinemaName(String name) {
         this.cinemaName = name;
     }
