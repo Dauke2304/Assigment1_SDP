@@ -3,4 +3,6 @@ public class CinemaConfig {
     private String cinemaName;
     private int numberOfScreens;
 
+    private CinemaConfig() {}
+
 }
