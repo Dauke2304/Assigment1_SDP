@@ -2,6 +2,11 @@ public class TicketBooking {
     private String movieTitle;
     private String seatNumber;
     private String snackCombo;
+    private TicketBooking(TicketBookingBuilder builder) {
+        this.movieTitle = builder.movieTitle;
+        this.seatNumber = builder.seatNumber;
+        this.snackCombo = builder.snackCombo;
+    }
     public static class TicketBookingBuilder {
         private String movieTitle;
         private String seatNumber;
